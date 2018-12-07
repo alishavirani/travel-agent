@@ -5,5 +5,10 @@
         "username":"root",
         "password":"mysql123",
         "db": "billing"
-    }
+    },
+    "email": {
+        "emailId":"av.alisha99@gmail.com",
+        "user":"me"
+    },
+    "gmailApiInterval": 30
 }

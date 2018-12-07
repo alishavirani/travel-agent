@@ -12,7 +12,7 @@ func ConnectToMySql(config models.Config) *sql.DB {
 	connectionString := config.SQL.Username + ":" + config.SQL.Password + "@/" + config.SQL.DB
 	db, err := sql.Open(config.SQL.DBType, connectionString)
 	if err != nil {
-		log.Panic("Err in conecting to MySQL", err)
+		log.Fatalf("Err in conecting to MySQL %v", err)
 	}
 	return db
 }

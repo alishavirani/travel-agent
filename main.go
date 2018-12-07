@@ -34,7 +34,7 @@ func main() {
 
 	//Start service
 	go func(w *sync.WaitGroup) {
-		services.Start(config, db)
+		services.EmailReader(config, db)
 	}(&wg)
 
 	wg.Wait()
