@@ -26,7 +26,7 @@ func main() {
 	//Create router
 	go func(w *sync.WaitGroup) {
 		r := mux.NewRouter()
-		apis.RegisterRoutes(r)
+		apis.RegisterRoutes(r, db)
 		port := ":" + config.ServerPort
 		http.ListenAndServe(port, r)
 		fmt.Println("Server is listening on port ", port)
